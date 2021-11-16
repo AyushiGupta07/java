@@ -17,8 +17,11 @@ public class Exception1 {
         }
         catch(ArrayIndexOutOfBoundsException e){
          //   System.out.println(e);
-          //  e.printStackTrace();
-            System.out.println(e.toString());
+            e.printStackTrace();
+
+        }
+        catch (Exception obj){
+            System.out.println(obj);
         }
 
 
