@@ -2,7 +2,10 @@ package Threading;
 import java.util.Scanner;
 public class Number extends Thread {
     public int n;
-    Thread t = new Thread();
+   private final Thread t ;
+   public Number(){
+      t = new Thread();
+   }
 
     public void run() {
         Scanner sc = new Scanner(System.in);
@@ -29,6 +32,7 @@ class Main{
  //       Thread t=new Thread();
         Number obj=new Number();
         obj.start();
+
     }
 }
 
