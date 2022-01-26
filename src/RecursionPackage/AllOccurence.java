@@ -7,17 +7,16 @@ package RecursionPackage;
  */
 public class AllOccurence {
     public static void main(String[] args) {
-        int[]array={1,7,4,7,6};
-         printALlOcuurenece(array,0,7);
+        int[]array={3,2,2,3,5,87,9};
+        System.out.println( printALlOcuurenece(array,3));
     }
-    public static int printALlOcuurenece(int[] arr,int currentIndex,int searchValue){
-        if(currentIndex==arr.length-1){
-            return -1;
+    public static int  printALlOcuurenece(int[] nums,int val) {
+        int count = 0;
+        for (int i = 0; i <nums.length ; i++) {
+            if(nums[i]!=val){
+                nums[count++]=nums[i];
+            }
         }
-                if(arr[currentIndex]==searchValue){
-                    System.out.println(currentIndex);
-                }
-             return  printALlOcuurenece(arr,currentIndex+1,searchValue);
-
+        return count;
     }
 }
